@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>চুড়ির মায়া । Churir Maya - শপ</title>
+    <title>চুড়ির মায়া | Churir Maya</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -16,17 +16,17 @@
     <!-- Header -->
     <header class="bg-rose-600 text-white shadow-md sticky top-0 z-40">
         <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
-            <div class="flex items-center space-x-2 space-x-reverse">
-                <i class="fa-solid font-bold text-2xl text-amber-300">✨</i>
+            <div class="flex items-center space-x-2">
+                <i class="fa-solid fa-gem-shards text-2xl text-amber-300"></i>
                 <div>
-                    <h1 class="text-xl md:text-2xl font-bold leading-tight">চুড়ির মায়া</h1>
+                    <h1 class="text-xl md:text-2xl font-bold leading-tight">চুড়ির মায়া</h1>
                     <p class="text-xs text-rose-100">Churir Maya</p>
                 </div>
             </div>
-            
-            <button onclick="toggleCartModal()" class="relative bg-rose-700 hover:bg-rose-800 px-4 py-2 rounded-full transition flex items-center gap-2">
+
+            <button onclick="toggleCartModal()" class="relative bg-rose-700 hover:bg-rose-800 px-4 py-2 rounded-full text-sm font-semibold flex items-center space-x-2 transition">
                 <i class="fa-solid fa-cart-shopping"></i>
-                <span class="hidden md:inline text-sm font-medium">কার্ট</span>
+                <span class="hidden md:inline">শপিং কার্ট</span>
                 <span id="cart-count" class="bg-amber-400 text-gray-900 text-xs font-bold px-2 py-0.5 rounded-full">0</span>
             </button>
         </div>
@@ -35,17 +35,17 @@
     <!-- Banner -->
     <section class="bg-gradient-to-r from-rose-500 to-pink-500 text-white py-10 px-4 text-center">
         <h2 class="text-3xl md:text-4xl font-bold mb-2">ঐতিহ্যবাহী ও আধুনিক কালেকশন</h2>
-        <p class="text-rose-100 max-w-lg mx-auto text-sm md:text-base">আপনার পছন্দের প্রিমিয়াম চুড়ি অর্ডার করুন ঘরে বসেই। যেকোনো সহায়তায় সরাসরি যোগাযোগ করুন আমাদের সাথে।</p>
+        <p class="text-rose-100 max-w-lg mx-auto text-sm md:text-base">আপনার পছন্দের প্রিমিয়াম চুড়ি অর্ডার করুন ঘরে বসে। যেকোনো সহায়তায় সরাসরি যোগাযোগ করুন আমাদের সাথে।</p>
     </section>
 
     <!-- Main Shop Section -->
     <main class="max-w-6xl mx-auto px-4 py-8 flex-grow w-full">
         <!-- Filter Tabs -->
         <div class="flex justify-center gap-2 mb-8 overflow-x-auto pb-2">
-            <button onclick="filterCategory('all')" class="cat-btn active bg-rose-600 text-white px-4 py-1.5 rounded-full text-sm font-medium transition shadow-sm">সব চুড়ি</button>
-            <button onclick="filterCategory('glass')" class="cat-btn bg-white hover:bg-rose-100 text-gray-700 px-4 py-1.5 rounded-full text-sm font-medium transition border border-rose-200 shadow-sm">কাঁচের চুড়ি</button>
-            <button onclick="filterCategory('reshmi')" class="cat-btn bg-white hover:bg-rose-100 text-gray-700 px-4 py-1.5 rounded-full text-sm font-medium transition border border-rose-200 shadow-sm">রেশমি চুড়ি</button>
-            <button onclick="filterCategory('metal')" class="cat-btn bg-white hover:bg-rose-100 text-gray-700 px-4 py-1.5 rounded-full text-sm font-medium transition border border-rose-200 shadow-sm">জয়পুরী/মেটাল</button>
+            <button onclick="filterCategory('all')" class="cat-btn active bg-rose-600 text-white px-4 py-1.5 rounded-full text-sm font-medium transition">সব চুড়ি</button>
+            <button onclick="filterCategory('glass')" class="cat-btn bg-white hover:bg-rose-100 text-gray-700 px-4 py-1.5 rounded-full text-sm font-medium border border-rose-200 transition">কাঁচের চুড়ি</button>
+            <button onclick="filterCategory('reshmi')" class="cat-btn bg-white hover:bg-rose-100 text-gray-700 px-4 py-1.5 rounded-full text-sm font-medium border border-rose-200 transition">রেশমি চুড়ি</button>
+            <button onclick="filterCategory('metal')" class="cat-btn bg-white hover:bg-rose-100 text-gray-700 px-4 py-1.5 rounded-full text-sm font-medium border border-rose-200 transition">জয়পুরী/মেটাল</button>
         </div>
 
         <!-- Product Grid -->
@@ -60,7 +60,7 @@
             <!-- Modal Header -->
             <div class="p-4 bg-rose-600 text-white flex justify-between items-center">
                 <h3 class="font-bold text-lg flex items-center gap-2">
-                    <i class="fa-solid fa-basket-shopping"></i> শপিং কার্ট
+                    <i class="fa-solid fa-basket-shopping"></i> আপনার কার্ট
                 </h3>
                 <button onclick="toggleCartModal()" class="text-white hover:text-gray-200 text-xl">✕</button>
             </div>
@@ -71,8 +71,8 @@
             </div>
 
             <!-- Checkout Form & Summary -->
-            <div class="p-4 bg-gray-50 border-t border-gray-200 space-y-3">
-                <div class="space-y-1 text-sm">
+            <div class="p-4 border-t border-gray-200 bg-gray-50">
+                <div class="space-y-2 text-sm">
                     <div class="flex justify-between text-gray-600">
                         <span>পণ্যের মোট দাম:</span>
                         <span>৳<span id="subtotal">0</span></span>
@@ -88,50 +88,50 @@
                 </div>
 
                 <div id="checkout-form" class="space-y-2 pt-2">
-                    <input type="text" id="cust-name" placeholder="আপনার নাম *" class="w-full text-sm p-2.5 border border-gray-300 rounded-lg focus:outline-rose-500">
-                    <input type="tel" id="cust-phone" placeholder="মোবাইল নম্বর *" class="w-full text-sm p-2.5 border border-gray-300 rounded-lg focus:outline-rose-500">
-                    <textarea id="cust-address" placeholder="পূর্ণাঙ্গ ঠিকানা *" rows="2" class="w-full text-sm p-2.5 border border-gray-300 rounded-lg focus:outline-rose-500"></textarea>
+                    <input type="text" id="cust-name" placeholder="আপনার নাম" class="w-full text-sm p-2.5 border rounded-lg focus:outline-rose-500">
+                    <input type="tel" id="cust-phone" placeholder="মোবাইল নম্বর" class="w-full text-sm p-2.5 border rounded-lg focus:outline-rose-500">
+                    <textarea id="cust-address" placeholder="পূর্ণ ঠিকানা" rows="2" class="w-full text-sm p-2.5 border rounded-lg focus:outline-rose-500"></textarea>
                     
-                    <select id="delivery-location" onchange="updateDelivery()" class="w-full text-sm p-2.5 border border-gray-300 rounded-lg focus:outline-rose-500 bg-white">
-                        <option value="80">ঢাকার ভেতরে (৳৮০)</option>
+                    <select id="delivery-location" onchange="updateDelivery()" class="w-full text-sm p-2.5 border rounded-lg focus:outline-rose-500">
+                        <option value="80">ঢাকার ভেতর (৳৮০)</option>
                         <option value="150">ঢাকার বাইরে (৳১৫০)</option>
                     </select>
 
                     <div class="pt-2">
                         <label class="block text-xs font-semibold text-gray-600 mb-1">পেমেন্ট মেথড সিলেক্ট করুন:</label>
                         <div class="grid grid-cols-3 gap-2 text-xs">
-                            <label class="border p-2 rounded-lg flex flex-col items-center cursor-pointer hover:border-rose-500 bg-white">
+                            <label class="border p-2 rounded-lg flex flex-col items-center cursor-pointer hover:border-rose-500">
                                 <input type="radio" name="payment" value="COD" checked class="accent-rose-600 mb-1">
                                 <span>ক্যাশ অন ডেলিভারি</span>
                             </label>
-                            <label class="border p-2 rounded-lg flex flex-col items-center cursor-pointer hover:border-rose-500 bg-white">
+                            <label class="border p-2 rounded-lg flex flex-col items-center cursor-pointer hover:border-rose-500">
                                 <input type="radio" name="payment" value="bKash" class="accent-rose-600 mb-1">
                                 <span class="text-pink-600 font-bold">bKash</span>
                             </label>
-                            <label class="border p-2 rounded-lg flex flex-col items-center cursor-pointer hover:border-rose-500 bg-white">
+                            <label class="border p-2 rounded-lg flex flex-col items-center cursor-pointer hover:border-rose-500">
                                 <input type="radio" name="payment" value="Nagad" class="accent-rose-600 mb-1">
                                 <span class="text-orange-600 font-bold">Nagad</span>
                             </label>
                         </div>
                     </div>
-                    
-                    <div id="payment-info" class="text-xs bg-rose-50 p-2.5 rounded-lg text-rose-800 hidden mt-2">
-                        <strong>নোট:</strong> আমাদের বিকাশ/নগদ নম্বর: <span class="font-bold border-b border-rose-400">01303850469</span> (Send Money বা Cash Out করতে পারেন)।
-                    </div>
-                </div>
 
-                <button onclick="submitOrder()" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 rounded-lg shadow-md transition flex items-center justify-center gap-2">
-                    <i class="fa-brands fa-whatsapp text-xl"></i>
-                    <span>হোয়াটসঅ্যাপে অর্ডার করুন</span>
-                </button>
+                    <div id="payment-info" class="text-xs bg-rose-50 p-2.5 rounded-lg text-rose-800 hidden mt-2">
+                        <strong>নোট:</strong> আমাদের বিকাশ/নগদ নম্বর: <span class="font-bold border-b border-rose-400">01303850469</span> (সেন্ড মানি করে ট্রানজেকশন আইডি নোট করুন)।
+                    </div>
+
+                    <button onclick="submitOrder()" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 rounded-xl flex items-center justify-center gap-2 text-sm mt-3 shadow-lg transition">
+                        <i class="fa-brands fa-whatsapp text-xl"></i>
+                        <span>হোয়াটসঅ্যাপে অর্ডার করুন</span>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
 
     <!-- Footer -->
     <footer class="bg-gray-900 text-gray-300 text-center py-6 mt-10 border-t border-gray-800">
-        <p class="font-bold text-rose-400">চুড়ির মায়া । Churir Maya</p>
-        <p class="text-xs mt-1 text-gray-400">হোয়াটসঅ্যাপ / বিকাশ: 01303850469</p>
+        <p class="font-bold text-lg text-rose-400">চুড়ির মায়া | Churir Maya</p>
+        <p class="text-xs mt-1 text-gray-400">হোয়াটসঅ্যাপ / বিকাশ: 01303850469</p>
         <p class="text-xs mt-3 text-gray-500">© 2026 Churir Maya. All Rights Reserved.</p>
     </footer>
 
@@ -139,10 +139,173 @@
         const whatsappNumber = "8801303850469";
 
         const products = [
-            { id: 1, name: "প্রিমিয়াম রেশমি চুড়ি (১২ পিস)", category: "reshmi", price: 180, image: "https://images.unsplash.com/photo-1611591475285-a36adaf961e0?w=500&q=80", desc: "মনোমুগ্ধকর রেশমি সুতার কাজের ট্র্যাডিশনাল চুড়ি।" },
-            { id: 2, name: "সোনার প্রলেপযুক্ত জয়পুরী চুড়ি", category: "metal", price: 350, image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=500&q=80", desc: "গর্জিয়াস লুকের মেটাল জয়পুরী চুড়ি সেট।" },
-            { id: 3, name: "লাল কাঁচের চুড়ি সেট (২৪ পিস)", category: "glass", price: 120, image: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=500&q=80", desc: "প্রথাগত লাল কাঁচের চুড়ি, যেকোনো উৎসবে পরা যায়।" },
-            { id: 4, name: "মাল্টিকলার রেশমি চুড়ি", category: "reshmi", price: 200, image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=500&q=80", desc: "বিভিন্ন রঙের চমৎকার মিশ্রণে তৈরি রেশমি চুড়ি।" },
-            { id: 5, name: "অ্যালুমিনিয়াম ভেলভেট চুড়ি", category: "metal", price: 280, image: "https://images.unsplash.com/photo-1611591475285-a36adaf961e0?w=500&q=80", desc: "কোয়ালিটি ভেলভেট ফিনিশিং চুড়ি সেট।" },
-            { id: 6, name: "সবুজ কাঁচের চুড়ি (২৪ পিস)", category: "glass", price: 
+            { id: 1, name: "প্রিমিয়াম রেশমি চুড়ি (১২ পিস)", category: "reshmi", price: 180, image: "https://images.unsplash.com/photo-1611591477568-15478443906a?w=500" },
+            { id: 2, name: "সোনার প্লেটিংযুক্ত জয়পুরী চুড়ি", category: "metal", price: 350, image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=500" },
+            { id: 3, name: "লাল কাঁচের চুড়ি সেট (২৪ পিস)", category: "glass", price: 120, image: "IMG-20261106-WA0000.jpg" },
+            { id: 4, name: "মাল্টিকালার রেশমি চুড়ি", category: "reshmi", price: 200, image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=500" },
+            { id: 5, name: "অ্যালুমিনিয়াম মেটালিক চুড়ি", category: "metal", price: 280, image: "https://images.unsplash.com/photo-1606760227091-3dd870d97f1d?w=500" },
+            { id: 6, name: "সবুজ কাঁচের চুড়ি (২৪ পিস)", category: "glass", price: 150, image: "IMG-20261106-WA0000.jpg" }
+        ];
+
+        let cart = [];
+
+        function renderProducts(filter = 'all') {
+            const grid = document.getElementById('product-grid');
+            grid.innerHTML = '';
             
+            const filtered = filter === 'all' ? products : products.filter(p => p.category === filter);
+
+            filtered.forEach(product => {
+                grid.innerHTML += `
+                    <div class="bg-white rounded-2xl shadow-sm border border-rose-100 overflow-hidden flex flex-col justify-between">
+                        <img src="${product.image}" alt="${product.name}" class="w-full h-44 object-cover">
+                        <div class="p-3 flex flex-col flex-grow justify-between">
+                            <div>
+                                <h4 class="font-semibold text-sm text-gray-800 line-clamp-2">${product.name}</h4>
+                                <p class="text-rose-600 font-bold text-sm mt-1">৳${product.price}</p>
+                            </div>
+                            <button onclick="addToCart(${product.id})" class="mt-3 w-full bg-rose-50 hover:bg-rose-600 hover:text-white text-rose-600 font-semibold text-xs py-2 rounded-xl transition border border-rose-200">
+                                কার্টে যোগ করুন
+                            </button>
+                        </div>
+                    </div>
+                `;
+            });
+        }
+
+        function filterCategory(cat) {
+            document.querySelectorAll('.cat-btn').forEach(btn => {
+                btn.classList.remove('bg-rose-600', 'text-white');
+                btn.classList.add('bg-white', 'text-gray-700', 'border', 'border-rose-200');
+            });
+            event.target.classList.remove('bg-white', 'text-gray-700', 'border', 'border-rose-200');
+            event.target.classList.add('bg-rose-600', 'text-white');
+            renderProducts(cat);
+        }
+
+        function toggleCartModal() {
+            const modal = document.getElementById('cart-modal');
+            modal.classList.toggle('hidden');
+        }
+
+        function addToCart(id) {
+            const product = products.find(p => p.id === id);
+            const existing = cart.find(item => item.id === id);
+            if (existing) {
+                existing.qty += 1;
+            } else {
+                cart.push({ ...product, qty: 1 });
+            }
+            updateCartUI();
+            toggleCartModal();
+        }
+
+        function updateCartUI() {
+            const count = document.getElementById('cart-count');
+            const itemsContainer = document.getElementById('cart-items');
+            
+            const totalQty = cart.reduce((sum, item) => sum + item.qty, 0);
+            count.innerText = totalQty;
+
+            itemsContainer.innerHTML = '';
+            if (cart.length === 0) {
+                itemsContainer.innerHTML = `<p class="text-center text-gray-400 py-10 text-sm">আপনার কার্ট খালি আছে</p>`;
+            } else {
+                cart.forEach((item, index) => {
+                    itemsContainer.innerHTML += `
+                        <div class="flex items-center justify-between py-3">
+                            <div class="flex items-center space-x-3">
+                                <img src="${item.image}" class="w-12 h-12 object-cover rounded-lg">
+                                <div>
+                                    <h5 class="text-xs font-semibold text-gray-800">${item.name}</h5>
+                                    <p class="text-xs text-rose-600 font-bold">৳${item.price} × ${item.qty}</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <button onclick="changeQty(${index}, -1)" class="w-6 h-6 bg-gray-100 rounded text-xs font-bold">-</button>
+                                <span class="text-xs font-semibold">${item.qty}</span>
+                                <button onclick="changeQty(${index}, 1)" class="w-6 h-6 bg-gray-100 rounded text-xs font-bold">+</button>
+                            </div>
+                        </div>
+                    `;
+                });
+            }
+            calculateTotal();
+        }
+
+        function changeQty(index, change) {
+            cart[index].qty += change;
+            if (cart[index].qty <= 0) {
+                cart.splice(index, 1);
+            }
+            updateCartUI();
+        }
+
+        function calculateTotal() {
+            const subtotal = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+            const delivery = parseInt(document.getElementById('delivery-location').value);
+            document.getElementById('subtotal').innerText = subtotal;
+            document.getElementById('delivery-charge').innerText = delivery;
+            document.getElementById('grand-total').innerText = subtotal + (cart.length > 0 ? delivery : 0);
+        }
+
+        function updateDelivery() {
+            calculateTotal();
+        }
+
+        document.querySelectorAll('input[name="payment"]').forEach(radio => {
+            radio.addEventListener('change', (e) => {
+                const info = document.getElementById('payment-info');
+                if (e.target.value !== 'COD') {
+                    info.classList.remove('hidden');
+                } else {
+                    info.classList.add('hidden');
+                }
+            });
+        });
+
+        function submitOrder() {
+            const name = document.getElementById('cust-name').value.trim();
+            const phone = document.getElementById('cust-phone').value.trim();
+            const address = document.getElementById('cust-address').value.trim();
+            const deliveryLocationText = document.getElementById('delivery-location').selectedOptions[0].text;
+            const paymentMethod = document.querySelector('input[name="payment"]:checked').value;
+
+            if (!name || !phone || !address) {
+                alert('দرکارী তথ্যগুলো পূরণ করুন (নাম, ফোন, ঠিকানা)');
+                return;
+            }
+
+            if (cart.length === 0) {
+                alert('আপনার কার্ট খালি!');
+                return;
+            }
+
+            let orderText = `*নতুন অর্ডার - চুড়ির মায়া*%0A%0A`;
+            orderText += `👤 *নাম:* ${name}%0A`;
+            orderText += `📞 *ফোন:* ${phone}%0A`;
+            orderText += `📍 *ঠিকানা:* ${address}%0A`;
+            orderText += `🚚 *ডেলিভারি:* ${deliveryLocationText}%0A`;
+            orderText += `💳 *পেমেন্ট:* ${paymentMethod}%0A%0A`;
+            orderText += `*অর্ডারকৃত পণ্যসমূহ:*%0A`;
+
+            cart.forEach((item, i) => {
+                orderText += `${i+1}. ${item.name} (${item.qty} পিস) - ৳${item.price * item.qty}%0A`;
+            });
+
+            const subtotal = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+            const delivery = parseInt(document.getElementById('delivery-location').value);
+            const grandTotal = subtotal + delivery;
+
+            orderText += `%0A📦 *সাবটোটাল:* ৳${subtotal}`;
+            orderText += `%0A🚚 *ডেলিভারি চার্জ:* ৳${delivery}`;
+            orderText += `%0A💰 *সর্বমোট বিল:* ৳${grandTotal}`;
+
+            const url = `https://wa.me/${whatsappNumber}?text=${orderText}`;
+            window.open(url, '_blank');
+        }
+
+        renderProducts();
+    </script>
+</body>
+</html>
